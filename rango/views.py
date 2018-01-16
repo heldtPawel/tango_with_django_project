@@ -7,3 +7,4 @@ def index(request):
 	context_dict = {'boldmessage': "Crunchy, creamy, cookie, candym cupcake!"}
 	
 	return render(request, 'rango/index.html', context= context_dict)
+	
