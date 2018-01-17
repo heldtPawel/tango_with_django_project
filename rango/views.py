@@ -6,5 +6,5 @@ def index(request):
 	#Note the key boldmessage is the same as {{boldmessage}} in the template!
 	context_dict = {'boldmessage': "Crunchy, creamy, cookie, candym cupcake!"}
 	
-	return render(request, 'rango/index.html', context= context_dict)
+	return render(request, 'rango/index.html', context=context_dict)
 	
