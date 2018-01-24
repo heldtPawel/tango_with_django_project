@@ -43,7 +43,8 @@ INSTALLED_APPS = [
 	'rango',
 ]
 
-MIDDLEWARE = [
+#edit to solve 'WSGIRequest' object has no attribute 'user'
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
