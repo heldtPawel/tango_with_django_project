@@ -3,7 +3,7 @@ from rango.models import Category, Page
 # Register your models here.
 
 class PageAdmin(admin.ModelAdmin):
-     lisy_display = ('title', 'category', 'url')
+     list_display = ('title', 'category', 'url')
 
 class CategoryAdmin(admin.ModelAdmin):
      prepopulated_fields = {'slug':('name',)}
