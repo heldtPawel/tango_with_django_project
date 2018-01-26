@@ -4,13 +4,19 @@ from rango.models import Category
 from rango.models import Page
 
 def index(request):
-    #Construct a dictionary to pass to the template engine its context
+        #Construct a dictionary to pass to the template engine its context
 	#Note the key boldmessage is the same as {{boldmessage}} in the template!
 	
 	category_list = Category.objects.order_by('-likes')[:5]
 	context_dict = {'categories': category_list}
+	response = render(request, 'rango/index.html', context=context_dict)
 	
-	return render(request, 'rango/index.html', context=context_dict)
+	return response
+
+
+def about(request):
+         return render(request, 'rango/about.html',{})
+        
 
 
 def show_category(request, category_name_slug):

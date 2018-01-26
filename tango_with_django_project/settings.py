@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'rango',
+    'rango',
 ]
 
 #edit to solve 'WSGIRequest' object has no attribute 'user'
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,14 +67,11 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-				'django.template.context_processors.media'
+		'django.template.context_processors.media'
             ],
         },
     },
 ]
-
-STATICFILES_DIRS = [STATIC_DIR, ]
-
 
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
@@ -126,6 +123,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATICFILES_DIRS = [STATIC_DIR]
 
 STATIC_URL = '/static/'
 
