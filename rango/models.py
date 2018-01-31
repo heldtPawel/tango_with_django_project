@@ -21,8 +21,9 @@ class Category(models.Model):
                 
 	def __str__(self):
 		return self.name
-	#def __unicode__(self):
-	#	return self.name
+
+	def __unicode__(self):
+        	return self.name
 		   
 		   
 class Page(models.Model):
@@ -34,8 +35,8 @@ class Page(models.Model):
 	def __str__(self):
 		return self.title
 	   
-	#def __unicode__(self):
-	 #  return self.title
+	def __unicode__(self):
+                return self.title
 
 class UserProfile(models.Model):
         user = models.OneToOneField(User)
@@ -43,5 +44,8 @@ class UserProfile(models.Model):
         picture = models.ImageField(upload_to='profile_images', blank=True)
 
         def __str__(self):
+                return self.user.username
+
+	def __unicode__(self):
                 return self.user.username
 
