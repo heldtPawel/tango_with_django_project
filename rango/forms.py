@@ -14,11 +14,12 @@ class CategoryForm(forms.ModelForm):
         model = Category
         fields = ('name',)
 
+
 class PageForm(forms.ModelForm):
     title = forms.CharField(max_length=128,
                             help_text="Please enter the title of the page.")
     url = forms.URLField(max_length=200,
-                        help_text="Please enter the URL of the Page.")
+                         help_text="Please enter the URL of the Page.")
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
 
     def clean(self):
@@ -39,7 +40,7 @@ class PageForm(forms.ModelForm):
 
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(widget = forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
         model = User
@@ -50,6 +51,3 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('website', 'picture')
-
-      
-        
