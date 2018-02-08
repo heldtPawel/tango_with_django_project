@@ -23,7 +23,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g-g#_0@9+fqgk6er7007xuu$+z&1cvo=a5fwhrt#yr+@2c64-p'
+SECRET_KEY = '@rk1)lyclunl3wv&$zrx@ronmlf5q$%sqyffn$ma$a8==83k30'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rango',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
